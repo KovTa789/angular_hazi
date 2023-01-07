@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../_models/dish';
+import {DISHES} from '../_models/mock-dishes';
 
 @Component({
   selector: 'app-dishes',
@@ -7,14 +8,17 @@ import { Dish } from '../_models/dish';
   styleUrls: ['./dishes.component.css']
 })
 export class DishesComponent implements OnInit {
-  dish: Dish = {
-    id: 1,
-    name: 'Rántotthús'
-  };
+  dishes = DISHES;
+  selectedDish?: Dish;
 
-constructor() { }
+  constructor() { }
 
-ngOnInit(): void {
+  ngOnInit(): void {
 
-}
+  }
+
+  onSelect(dish: Dish): void {
+    this.selectedDish = dish;
+  }
+
 }

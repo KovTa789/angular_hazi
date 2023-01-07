@@ -1,7 +1,11 @@
-<h2>{{dish.name | uppercase}} Részletek</h2>
-<div><span>sorszám: </span>{{dish.id}}</div>
-<div><span>név: </span>{{dish.name}}</div>
-<!--<div>
-  <label for="name">Mai napra választható menü: </label>
-  <input id="name" [(ngModel)]="dish.name" placeholder="név">
-</div>-->
+<h2>Választásom</h2>
+<ul class="dishes">
+  <li *ngFor="let dish of dishes">
+    <button type="button" [class.selected]="dish === selectedDish" (click)="onSelect(dish)">
+      <span class="badge">{{dish.id}}</span>
+      <span class="name">{{dish.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<app-dish-detail [dish]="selectedDish"></app-dish-detail>

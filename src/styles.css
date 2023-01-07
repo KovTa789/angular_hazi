@@ -34,7 +34,7 @@ button {
 }
   
 button:hover {
-    background-color: black;
+    background-color: #0cc;
     color: white;
 }
 
