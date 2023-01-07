@@ -1,0 +1,5 @@
+<div *ngIf="msgService.msgs.length">
+    <h2>Üzenetek</h2>
+    <button type="button" class="clear" (click)="msgService.clear()">Üzenetek törlése</button>
+    <div *ngFor='let msg of msgService.msgs'> {{msg}} </div>
+</div>
