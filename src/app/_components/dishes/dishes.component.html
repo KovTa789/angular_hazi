@@ -1,11 +1,8 @@
-<h2>Választásom</h2>
+<h2>Ételeink</h2>
 <ul class="dishes">
   <li *ngFor="let dish of dishes">
-    <button type="button" [class.selected]="dish === selectedDish" (click)="onSelect(dish)">
-      <span class="badge">{{dish.id}}</span>
-      <span class="name">{{dish.name}}</span>
-    </button>
+    <a routerLink="/detail/{{dish.id}}">
+      <span class="badge">{{dish.id}}</span> {{dish.name}}
+    </a>
   </li>
 </ul>
-
-<app-dish-detail [dish]="selectedDish"></app-dish-detail>

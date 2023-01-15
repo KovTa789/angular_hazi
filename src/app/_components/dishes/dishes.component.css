@@ -1,66 +1,54 @@
-/* HeroesComponent's private CSS styles */
+
 .dishes {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
-  }
-  
-  .dishes li {
-    display: flex;
-  }
-  
-  .dishes button {
-    flex: 1;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: 0;
-    border-radius: 4px;
-    display: flex;
-    align-items: stretch;
-    height: 1.8em;
-  }
-  
-  .dishes button:hover {
-    color: #0cc;
-    background-color: #e6e6e6;
-    left: .1em;
-  }
-  
-  .dishes button:active {
-    background-color: #0cc;
-    color: #fafafa;
-  }
-  
-  .dishes button.selected {
-    background-color: #0cc;
-    color: white;
-  }
-  
-  .dishes button.selected:hover {
-    background-color: #0cc;
-    color: white;
-  }
-  
-  .dishes button.selected:active {
-    background-color: #0cc;
-    color: white;
-  }
-  
-  .dishes .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #000;
-    line-height: 1em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
-  
-  .dishes .name {
-    align-self: center;
-  }
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.dishes li {
+  position: relative;
+  cursor: pointer;
+}
+
+.dishes li:hover {
+  left: .1em;
+}
+
+.dishes a {
+  color: #000;
+  text-decoration: none;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.dishes a:hover {
+  color: #fff;
+  background-color: #0cc;
+}
+
+.dishes a:active {
+  background-color: #0cc;
+  color: #fafafa;
+}
+
+.dishes .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #000;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}

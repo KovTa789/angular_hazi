@@ -15,4 +15,11 @@ export class DishService {
     this.msgService.add('DishService: fetched dishes');
     return dishes;
   }
+  
+  getDish(id: number): Observable<Dish> {
+    const dish = DISHES.find(h => h.id === id)!;
+    this.msgService.add(`DishService: fetched dish id=${id}`);
+    return of(dish);
+  }
+
 }

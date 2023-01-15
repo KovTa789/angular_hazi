@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DishesComponent, DishDetailComponent, MsgsComponent } from '@app/_components';
+import { DishDashComponent } from './_components/dishdash/dishdash.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { DishesComponent, DishDetailComponent, MsgsComponent } from '@app/_compo
     AppComponent,
     DishesComponent,
     DishDetailComponent,
-    MsgsComponent
+    MsgsComponent,
+    DishDashComponent
   ],
   imports: [
     BrowserModule,

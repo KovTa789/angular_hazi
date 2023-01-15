@@ -1,0 +1,6 @@
+<h2>Ajánlatok</h2>
+<div class="dishes-menu">
+  <a *ngFor="let dish of dishes" routerLink="/detail/{{dish.id}}">
+    {{dish.name}}
+  </a>
+</div>
