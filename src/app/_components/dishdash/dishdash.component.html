@@ -1,5 +1,14 @@
+<h2>Étel hozzáadása</h2>
+<form [formGroup]="dishForm" (ngSubmit)="onSubmit()">
+  <label>
+    Étel megnevezése:
+    <input type="text" formControlName="dishName">
+  </label>
+  <button [disabled]="!dishForm.valid">Mentés</button>
+</form>
+
 <h2>Ajánlatok</h2>
-<div class="dishes-menu">
+<div *ngIf="dishes" class="dishes-menu">
   <a *ngFor="let dish of dishes" routerLink="/detail/{{dish.id}}">
     {{dish.name}}
   </a>

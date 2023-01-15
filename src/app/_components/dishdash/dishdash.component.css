@@ -18,6 +18,10 @@ h2 {
     align-items: flex-start;
   }
   
+  input {
+    color:#333;
+  }
+
   a {
     background-color: #0cc;
     border-radius: 2px;

@@ -1,25 +1,29 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Dish, DISHES } from '@app/_models';
-import { Observable, of } from 'rxjs';
-import { MsgService } from './msg.service';
+import { Dish } from '@app/_models/dish';
+import { environment } from 'src/environments/environment';
+
+const httpOption = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DishService {
 
-  constructor(private msgService: MsgService) { }
+  constructor(private http: HttpClient) { }
 
-  getDishes(): Observable<Dish[]> {
-    const dishes = of(DISHES);
-    this.msgService.add('DishService: fetched dishes');
-    return dishes;
-  }
-  
-  getDish(id: number): Observable<Dish> {
-    const dish = DISHES.find(h => h.id === id)!;
-    this.msgService.add(`DishService: fetched dish id=${id}`);
-    return of(dish);
+  getAllDishes() {
+    return this.http.get<Dish[]>(`${environment.apiUrl}/posts`, httpOption);
   }
 
+  getDishById(dishId: Number) {
+    return this.http.get<Dish>(`${environment.apiUrl}/posts/${dishId}`, httpOption);
+  }
+
+  addDish(dish: Dish) {
+    return this.http.post<Dish>(`${environment.apiUrl}/posts`, dish, httpOption);
+  }
 }

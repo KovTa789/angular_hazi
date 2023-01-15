@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Bableves"
+    },
+    {
+      "id": 2,
+      "name": "Spagetti"
+    },
+    {
+      "name": "Palacsinta",
+      "id": 3
+    },
+    {
+      "name": "Marhapörkölt",
+      "id": 4
+    },
+    {
+      "name": "Császármorzsa",
+      "id": 5
+    },
+    {
+      "name": "Húsgombóc",
+      "id": 6
+    },
+    {
+      "name": "Paradicsomleves",
+      "id": 7
+    },
+    {
+      "name": "Töltöttkáposzta",
+      "id": 8
+    },
+    {
+      "name": "Zöldbabfőzelék",
+      "id": 9
+    },
+    {
+      "name": "Palócleves",
+      "id": 10
+    },
+    {
+      "name": "Próbakaja",
+      "id": 11
+    }
+  ]
+}

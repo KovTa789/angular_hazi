@@ -1,5 +1,5 @@
 <h2>Ételeink</h2>
-<ul class="dishes">
+<ul *ngIf="dishes" class="dishes">
   <li *ngFor="let dish of dishes">
     <a routerLink="/detail/{{dish.id}}">
       <span class="badge">{{dish.id}}</span> {{dish.name}}

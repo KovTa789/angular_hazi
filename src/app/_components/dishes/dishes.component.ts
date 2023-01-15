@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators } from '@angular/forms';
 import { Dish } from '@app/_models';
 import { DishService } from "@app/_services";
 
@@ -12,14 +13,13 @@ export class DishesComponent implements OnInit {
   
   constructor(private dishService: DishService ) { }
 
-// Az itt megadott metódusok a komponens 
-// betöltésekor automatikusan meghívódnak
 ngOnInit(): void {
-this.getDishes();
+  this.getDishes();
 }
 
 getDishes(): void {
-this.dishService.getDishes()
-.subscribe(dishes => this.dishes = dishes);
+  this.dishService.getAllDishes()
+  .subscribe(data => this.dishes = data);
 }
+
 }
