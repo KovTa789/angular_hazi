@@ -10,7 +10,7 @@ import { DishService } from '@app/_services';
   styleUrls: ['./dish-detail.component.css']
 })
 export class DishDetailComponent implements OnInit {
-  dish: Dish | undefined;
+  dish!: Dish;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +29,20 @@ export class DishDetailComponent implements OnInit {
         console.log(dish);
         this.dish = dish;
     });
+  }
+
+  save(): void {
+    this.dishService.updateDish(this.dish).subscribe(
+      () => this.goBack()
+    );
+  }
+
+  delete(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    confirm("Biztos benne hogy  törli ezt a fogást?")
+    ? this.dishService.deleteDish(id).subscribe(
+      () => this.goBack())
+    : "";
   }
 
   goBack(): void {

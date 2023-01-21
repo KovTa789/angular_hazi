@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DishesComponent, DishDetailComponent,  DishDashComponent } from '@app/_components';
+import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
 
 
 
@@ -14,7 +15,8 @@ import { DishesComponent, DishDetailComponent,  DishDashComponent } from '@app/_
     AppComponent,
     DishesComponent,
     DishDetailComponent,
-    DishDashComponent
+    DishDashComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

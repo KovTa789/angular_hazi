@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "name": "Bableves"
+      "name": "Rántotthús"
     },
     {
       "id": 2,
@@ -39,10 +39,6 @@
     {
       "name": "Palócleves",
       "id": 10
-    },
-    {
-      "name": "Próbakaja",
-      "id": 11
     }
   ]
 }
